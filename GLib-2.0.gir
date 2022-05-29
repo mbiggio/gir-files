@@ -4248,12 +4248,6 @@ in the macro, so you shouldn't use double quotes.</doc>
         </parameter>
       </parameters>
     </function-macro>
-    <function-macro name="DEPRECATED_ENUMERATOR_IN_2_74_FOR" c:identifier="GLIB_DEPRECATED_ENUMERATOR_IN_2_74_FOR" introspectable="0">
-      <parameters>
-        <parameter name="f">
-        </parameter>
-      </parameters>
-    </function-macro>
     <function-macro name="DEPRECATED_FOR" c:identifier="G_DEPRECATED_FOR" version="2.32" introspectable="0">
       <doc xml:space="preserve">This macro is similar to %G_GNUC_DEPRECATED_FOR, and can be used to mark
 functions declarations as deprecated. Unlike %G_GNUC_DEPRECATED_FOR, it
@@ -4414,12 +4408,6 @@ int my_mistake (void);
         </parameter>
       </parameters>
     </function-macro>
-    <function-macro name="DEPRECATED_IN_2_74_FOR" c:identifier="GLIB_DEPRECATED_IN_2_74_FOR" introspectable="0">
-      <parameters>
-        <parameter name="f">
-        </parameter>
-      </parameters>
-    </function-macro>
     <function-macro name="DEPRECATED_MACRO_FOR" c:identifier="GLIB_DEPRECATED_MACRO_FOR" introspectable="0">
       <parameters>
         <parameter name="f">
@@ -4570,12 +4558,6 @@ int my_mistake (void);
         </parameter>
       </parameters>
     </function-macro>
-    <function-macro name="DEPRECATED_MACRO_IN_2_74_FOR" c:identifier="GLIB_DEPRECATED_MACRO_IN_2_74_FOR" introspectable="0">
-      <parameters>
-        <parameter name="f">
-        </parameter>
-      </parameters>
-    </function-macro>
     <function-macro name="DEPRECATED_TYPE_FOR" c:identifier="GLIB_DEPRECATED_TYPE_FOR" introspectable="0">
       <parameters>
         <parameter name="f">
@@ -4721,12 +4703,6 @@ int my_mistake (void);
       </parameters>
     </function-macro>
     <function-macro name="DEPRECATED_TYPE_IN_2_72_FOR" c:identifier="GLIB_DEPRECATED_TYPE_IN_2_72_FOR" introspectable="0">
-      <parameters>
-        <parameter name="f">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="DEPRECATED_TYPE_IN_2_74_FOR" c:identifier="GLIB_DEPRECATED_TYPE_IN_2_74_FOR" introspectable="0">
       <parameters>
         <parameter name="f">
         </parameter>
@@ -7145,32 +7121,6 @@ and %FALSE otherwise.</doc>
         </parameter>
       </parameters>
     </callback>
-    <callback name="EqualFuncFull" c:type="GEqualFuncFull" version="2.74">
-      <doc xml:space="preserve">Specifies the type of a function used to test two values for
-equality. The function should return %TRUE if both values are equal
-and %FALSE otherwise.
-
-This is a version of #GEqualFunc which provides a @user_data closure from
-the caller.</doc>
-      <return-value transfer-ownership="none">
-        <doc xml:space="preserve">%TRUE if @a = @b; %FALSE otherwise</doc>
-        <type name="gboolean" c:type="gboolean"/>
-      </return-value>
-      <parameters>
-        <parameter name="a" transfer-ownership="none" nullable="1" allow-none="1">
-          <doc xml:space="preserve">a value</doc>
-          <type name="gpointer" c:type="gconstpointer"/>
-        </parameter>
-        <parameter name="b" transfer-ownership="none" nullable="1" allow-none="1">
-          <doc xml:space="preserve">a value to compare with</doc>
-          <type name="gpointer" c:type="gconstpointer"/>
-        </parameter>
-        <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="2">
-          <doc xml:space="preserve">user data provided by the caller</doc>
-          <type name="gpointer" c:type="gpointer"/>
-        </parameter>
-      </parameters>
-    </callback>
     <record name="Error" c:type="GError" glib:type-name="GError" glib:get-type="g_error_get_type" c:symbol-prefix="error">
       <doc xml:space="preserve">The `GError` structure contains information about
 an error that has occurred.</doc>
@@ -7699,16 +7649,6 @@ as appropriate for a given platform. IEEE floats and doubles are supported
       <member name="bits" value="4" c:identifier="G_FORMAT_SIZE_BITS">
         <doc xml:space="preserve">set the size as a quantity in bits, rather than
     bytes, and return units in bits. For example, &#x2018;Mb&#x2019; rather than &#x2018;MB&#x2019;.</doc>
-      </member>
-      <member name="only_value" value="8" c:identifier="G_FORMAT_SIZE_ONLY_VALUE">
-        <doc xml:space="preserve">return only value, without unit; this should
-    not be used together with @G_FORMAT_SIZE_LONG_FORMAT
-    nor @G_FORMAT_SIZE_ONLY_UNIT. Since: 2.74</doc>
-      </member>
-      <member name="only_unit" value="16" c:identifier="G_FORMAT_SIZE_ONLY_UNIT">
-        <doc xml:space="preserve">return only unit, without value; this should
-    not be used together with @G_FORMAT_SIZE_LONG_FORMAT
-    nor @G_FORMAT_SIZE_ONLY_VALUE. Since: 2.74</doc>
       </member>
     </bitfield>
     <callback name="FreeFunc" c:type="GFreeFunc">
@@ -13863,7 +13803,7 @@ linked against at application run time.</doc>
       <doc xml:space="preserve">The maximum value which can be held in a #guint8.</doc>
       <type name="guint8" c:type="guint8"/>
     </constant>
-    <constant name="MICRO_VERSION" value="0" c:type="GLIB_MICRO_VERSION">
+    <constant name="MICRO_VERSION" value="1" c:type="GLIB_MICRO_VERSION">
       <doc xml:space="preserve">The micro version number of the GLib library.
 
 Like #gtk_micro_version, but from the headers used at
@@ -13887,7 +13827,7 @@ linked against at application run time.</doc>
       <doc xml:space="preserve">The minimum value which can be held in a #gint8.</doc>
       <type name="gint8" c:type="gint8"/>
     </constant>
-    <constant name="MINOR_VERSION" value="73" c:type="GLIB_MINOR_VERSION">
+    <constant name="MINOR_VERSION" value="72" c:type="GLIB_MINOR_VERSION">
       <doc xml:space="preserve">The minor version number of the GLib library.
 
 Like #gtk_minor_version, but from the headers used at
